@@ -15,7 +15,7 @@ int main(void)
 
 	} while (l <= 'z');
 
-	printf("\n");
+	putchar('\n');
 
 	return (0);
 }
