@@ -22,7 +22,7 @@ int main(void)
 
 	} while (L <= 'Z');
 
-	printf("\n");
+	putchar('\n');
 
 	return (0);
 }
