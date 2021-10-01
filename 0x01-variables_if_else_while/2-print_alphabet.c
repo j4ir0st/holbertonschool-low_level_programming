@@ -13,8 +13,7 @@ int main(void)
 		putchar(l);
 		l++;
 
-	}
-	while (l <= 'z');
+	} while (l <= 'z');
 
 	printf("\n");
 
