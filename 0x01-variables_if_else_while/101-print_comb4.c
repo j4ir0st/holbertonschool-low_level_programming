@@ -12,7 +12,7 @@ int main(void)
 	int o = 50;
 	int a = 44;
 	int b = 32;
-	int c = 1;
+	int c = 0;
 	int d = 1;
 
 	do {
@@ -29,14 +29,15 @@ int main(void)
 				}
 				o++;
 			} while (o <= 57);
-			o = 50 + d;
+			o = 50 + d + c;
 			m++;
 			d++;
 		} while (m <= 56);
+		c++;
 		m = 49 + c;
+		d = 1;
 		o = 50 + c;
 		n++;
-		c++;
 	} while (n <= 55);
 
 	putchar('\n');
