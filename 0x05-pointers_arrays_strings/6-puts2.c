@@ -10,8 +10,11 @@ void puts2(char *str)
 
 	while (str[n] != 0)
 	{
-		printf("%c", str[n]);
-		n = n + 2;
+		if (n % 2 == 0)
+		{
+			printf("%c", str[n]);
+		}
+		n++;
 	}
 	printf("\n");
 }
