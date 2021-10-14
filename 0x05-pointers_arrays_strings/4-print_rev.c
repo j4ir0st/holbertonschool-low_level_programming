@@ -13,8 +13,8 @@ void print_rev(char *s)
 	{
 		m++;
 	}
-
-	while (m > 0)
+	m--;
+	while (m >= 0)
 	{
 		printf("%c", s[m]);
 		m--;
