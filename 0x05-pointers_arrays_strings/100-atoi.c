@@ -2,7 +2,7 @@
 /**
  * _atoi - converts strings to integers
  * @s: char argument
- * return: returns n
+ * Return: returns n
  */
 
 int _atoi(char *s)
@@ -19,7 +19,7 @@ int _atoi(char *s)
 		}
 		if (s[c] >= 48 && s[c] <= 57)
 		{
-			n =(10*n) + (s[c] - 48);
+			n = (10 * n) + (s[c] - 48);
 		}
 		else if (n > 0)
 		{
