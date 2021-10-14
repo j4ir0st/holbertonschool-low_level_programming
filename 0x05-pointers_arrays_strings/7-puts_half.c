@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * _puts - Entry point
+ * puts_half - Entry point
  * @str: char variable
  *
  */
