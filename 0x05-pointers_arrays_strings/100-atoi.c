@@ -10,7 +10,6 @@ int _atoi(char *s)
 	int c = 0;
 	int sgn = 1;
 	unsigned int n = 0;
-	int d = 0;
 
 	while (s[c])
 	{
@@ -20,12 +19,11 @@ int _atoi(char *s)
 		}
 		if (s[c] >= 48 && s[c] <= 57)
 		{
-			if (n > 0)
-			{
-				n = n * (10 ^ d);
-				d++;
-			}
-			n = n + (s[c] - 48);
+			n =(10*n) + (s[c] - 48);
+		}
+		else if (n > 0)
+		{
+			break;
 		}
 		c++;
 	}
