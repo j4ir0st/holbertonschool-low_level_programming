@@ -14,11 +14,12 @@ void print_rev(char *s)
 		m++;
 	}
 
-	do {
+	while (m >= 0)
+	{
 		printf("%c", s[m]);
 		m--;
 
-	} while (m > 0);
+	}
 	printf("\n");
 
 
