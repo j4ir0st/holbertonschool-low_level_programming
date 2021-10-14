@@ -1,5 +1,9 @@
 #include <stdio.h>
-
+/**
+ * print_array - Entry point
+ * @a: pointer
+ * @n: integer
+ */
 void print_array(int *a, int n)
 {
 	int m;
