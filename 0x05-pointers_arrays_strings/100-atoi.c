@@ -2,35 +2,33 @@
 /**
  * _atoi - converts strings to integers
  * @s: char argument
+ * return: returns n
  */
 
 int _atoi(char *s)
 {
 	int c = 0;
-	int sgn = 0;
-	int n = 0;
+	int sgn = 1;
+	unsigned int n = 0;
 	int d = 0;
 
-	while(s[c])
+	while (s[c])
 	{
-		if(s[c] == 45)
+		if (s[c] == 45)
 		{
-			sgn++;
+			sgn *= -1;
 		}
 		if (s[c] >= 48 && s[c] <= 57)
 		{
 			if (n > 0)
 			{
-				n = n*(10^d);
+				n = n * (10 ^ d);
 				d++;
 			}
 			n = n + (s[c] - 48);
 		}
 		c++;
 	}
-	if (sgn % 2 != 0)
-	{
-		n = n * (-1);
-	}
+	n = n * (sgn);
 	return (n);
 }
