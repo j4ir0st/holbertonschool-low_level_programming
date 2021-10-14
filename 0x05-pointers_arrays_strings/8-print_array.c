@@ -7,6 +7,7 @@
 void print_array(int *a, int n)
 {
 	int m;
+
 	for (m = 0; m < n; m++)
 	{
 		printf("%i", a[m]);
