@@ -2,6 +2,7 @@
  * _strcmp - compares two strings
  * @s1: char argument
  * @s2: char argument
+ * Return: returns the dif of two string
  */
 
 char _strcmp(char *s1, char *s2)
