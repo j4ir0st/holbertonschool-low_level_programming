@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * *_strcat - Entry point
  * @dest: destination char argument
  * @src: source char argument
  * Return: Always 0 (Success)
