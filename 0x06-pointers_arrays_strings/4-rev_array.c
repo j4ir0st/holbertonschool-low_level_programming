@@ -6,7 +6,7 @@
 
 void reverse_array(int *a, int n)
 {
-	int a2[400];
+	int a2[20];
 	int c = 0;
 
 	while (c < n)
@@ -20,5 +20,4 @@ void reverse_array(int *a, int n)
 		a[c] = a2[n-1];
 		n--;
 	}
-	a[c] = '\0';
 }
