@@ -2,6 +2,7 @@
  * reverse_array - reverses the content of the array
  * @a: int argument
  * @n: int argument
+ * Return: returns 0
  */
 
 void reverse_array(int *a, int n)
@@ -20,4 +21,5 @@ void reverse_array(int *a, int n)
 		a[c] = a2[n-1];
 		n--;
 	}
+	return (0);
 }
