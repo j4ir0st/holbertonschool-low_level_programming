@@ -1,13 +1,14 @@
 /**
  * *string_toupper - reverses the content of the array
  * @s: char argument
+ * Return: returns s
  */
 
 char *string_toupper(char *s)
 {
 	int d = 0;
 
-	while(s[d] != '\0')
+	while (s[d] != '\0')
 	{
 		if(s[d] < 123 && s[d] > 96)
 		{
