@@ -1,25 +1,20 @@
 /**
- * reverse_array - reverses the content of the array
- * @a: int argument
- * @n: int argument
- */
+* reverse_array - reverse array elements
+* @a: array
+* @n: number of elements in array
+*/
 
 void reverse_array(int *a, int n)
 {
-	int a2[20];
-	int c = 0;
 
-	while (c < n)
+	int tmp, i = 0;
+	int f = n - 1;
+
+	while (i < f)
 	{
-		a2[c] = a[c];
-		c++;
-	}
-	if (n != 0)
-	{
-		for (c = 0; n >= 0; c++)
-		{
-			a[c] = a2[n - 1];
-			n--;
-		}
+		tmp = *(a + i);
+		*(a + i) = *(a + f);
+		*(a + f) = tmp;
+		i++, f--;
 	}
 }
