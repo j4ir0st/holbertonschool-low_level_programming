@@ -2,6 +2,7 @@
  * _strspn - gets the length of a prefix substring
  * @s: char argument as pointer
  * @accept: char argument
+ * Return: returns r
  */
 
 unsigned int _strspn(char *s, char *accept)
