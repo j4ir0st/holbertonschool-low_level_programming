@@ -42,7 +42,7 @@ char *_strstr(char *haystack, char *needle)
 	}
 	else
 	{
-		haystack = 0;
+		haystack = "NULL";
 	}
 	return (haystack);
 }
