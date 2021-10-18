@@ -1,35 +1,24 @@
 /**
- * *leet - reverses the content of the array
+ * *leet - turns a string into 1337
  * @s: char argument
+ * Return: Returns s
  */
 
 char *leet(char *s)
 {
-	int c = 0;
+	int c, a;
+	char r1[] = "aAeEoOtTlL";
+	char r2[] = "4433007711";
 
-	while (s[c])
+	for (c = 0; s[c] != '\0'; c++)
 	{
-		if (s[c] == 'a' || s[c] == 'A')
+		for (a = 0; r1[a] != '\0'; a++)
 		{
-			s[c] = '4';
+			if (s[c] == r1[a])
+			{
+				s[c] = r2[a];
+			}
 		}
-		else if (s[c] == 'e' || s[c] == 'E')
-		{
-			s[c] = '3';
-		}
-		else if (s[c] == 'o' || s[c] == 'O')
-		{
-			s[c] = '0';
-		}
-		else if (s[c] == 't' || s[c] == 'T')
-		{
-			s[c] = '7';
-		}
-		else if (s[c] == 'l' || s[c] == 'L')
-		{
-			s[c] = '1';
-		}
-		c++;
 	}
 	return (s);
 }
