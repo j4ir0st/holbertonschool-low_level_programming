@@ -1,5 +1,5 @@
 /**
- * *_strbrk - searches a string for any of a set of bytes
+ * *_strpbrk - searches a string for any of a set of bytes
  * @s: char argument as pointer
  * @accept: char argument
  * Return: return pointer s
