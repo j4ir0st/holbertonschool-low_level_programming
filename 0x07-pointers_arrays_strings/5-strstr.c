@@ -38,7 +38,7 @@ char *_strstr(char *haystack, char *needle)
 		}
 		else if (*(haystack) == 0 && needle != 0)
 		{
-			haystack = haystack - len
+			haystack = haystack - len;
 		}
 	}
 	return (haystack);
