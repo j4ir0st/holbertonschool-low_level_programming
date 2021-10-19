@@ -7,7 +7,7 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int c = 0;
+	int c = 0, len = 0;
 
 	if (needle != 0 && haystack != 0)
 	{
@@ -30,10 +30,11 @@ char *_strstr(char *haystack, char *needle)
 			}
 			c = 0;
 			haystack++;
+			len++;
 		}
-		if (*(haystack) == 0 && needle != 0)
+		if (*(haystack) == 0)
 		{
-			haystack = 0;
+			haystack = haystack - l;
 		}
 	}
 	return (haystack);
