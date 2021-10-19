@@ -32,7 +32,7 @@ char *_strstr(char *haystack, char *needle)
 			haystack++;
 			len++;
 		}
-		if (*(haystack) == 0)
+		if (*(haystack) == 0 && needle != 0)
 		{
 			haystack = haystack - l;
 		}
