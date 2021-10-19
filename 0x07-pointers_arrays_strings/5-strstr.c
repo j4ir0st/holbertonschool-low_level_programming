@@ -36,6 +36,10 @@ char *_strstr(char *haystack, char *needle)
 			haystack++;
 			l++;
 		}
+		if (!needle)
+		{
+
+		}
 		if (*(haystack) == 0 && needle != 0)
 		{
 			haystack = 0;
