@@ -19,9 +19,9 @@ int is_prime_number(int n)
 }
 
 /**
- * is_prime - recursively divide by higher divisor, skip even nums
+ * primos - divide by higher divisor, skip even nums
  * @n: number to check if prime
- * @divisor: divisor
+ * @div: divisor
  * Return: 1 if prime, 0 if not, or recursive function call
  */
 
