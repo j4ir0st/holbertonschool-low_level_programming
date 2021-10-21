@@ -1,6 +1,7 @@
 /**
- * _strlen_recursion - returns the lenght of a string using recursion
- * @s: char argument
+ * factorial - return the factorial of given number using recursive
+ * @n: int argument
+ * Return: returns the factorial or -1 on negative numbers
  */
 
 int factorial(int n)
