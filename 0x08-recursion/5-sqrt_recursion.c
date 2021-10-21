@@ -1,6 +1,8 @@
 int _raiz(int n, int raiz);
+
 /**
  * _sqrt_recursion - returns the natural square root of a given number
+ * _raiz - finds the root square of the number
  * @n: int argument
  * Return: returns -1 on error
  */
