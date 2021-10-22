@@ -9,13 +9,13 @@ int wildcmp(char *s1, char *s2)
 {
 	if (*s2 == 42 && s1 != 0)
 	{
-		if (*(s2 + 6) == 'c' || *(s2 + 5) == 'c')
+		if (*(s2 + 1) == 'c' || *(s2 + 5) == 'c')
 		{
 			return (1);
 		}
 		return (wildcmp(s1, (s2 + 1)));
 	}
-	else if (*(s2 - 1) == 42 && *s1 != *s2 && *s1 != 0)
+	else if ((*(s2 - 1) == 42) && (*s1 != *s2) && (*s1 != 0))
 	{
 		return (wildcmp((s1 + 1), s2));
 	}
