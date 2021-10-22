@@ -4,6 +4,7 @@ int comparar(char *inicio, char *fin);
 /**
  * is_palindrome - returns 1 if a string is palindrome and 0 if not
  * @s: char argument
+ * Return: returns comparar
  */
 
 int is_palindrome(char *s)
@@ -32,8 +33,8 @@ int _strlen(char *s)
 
 /**
  * comparar - compare head and tail indices for match
- * @head: index starting from left of string
- * @tail: index starting from right of string, moving backwards
+ * @inicio: index starting from left of string
+ * @fin: index starting from right of string, moving backwards
  * Return: 1 if palindrome, 0 if not
  */
 
