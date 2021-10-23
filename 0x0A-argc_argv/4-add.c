@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 
 	for (c = 1; c < argc; c++)
 	{
-		if (atoi(argv[c]) >= 0)
+		if (atoi(argv[c]) >= 0 && (*argv[c] > 47 && *argv[c] < 58))
 		{
 			sum = sum + atoi(argv[c]);
 		}
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 			return (1);
 		}
 	}
-	printf("%d\n", sum);
+	printf("%i\n", sum);
 
 	return (0);
 }
