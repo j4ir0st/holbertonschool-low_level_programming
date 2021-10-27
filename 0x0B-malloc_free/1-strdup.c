@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
  * _strdup - return a pointer
@@ -12,12 +11,16 @@ char *_strdup(char *str)
 	char *str1;
 	unsigned int c, len = 0;
 
+	if(str == NULL)
+	{
+		return (NULL);
+	}
 	while (str[len])
 	{
 		len++;
 	}
 	str1 = malloc(sizeof(char) * (len + 1));
-	if (*str == NULL || str1 == NULL)
+	if (str1 == NULL)
 	{
 		return (NULL);
 	}
