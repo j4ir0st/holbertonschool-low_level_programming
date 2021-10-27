@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * _strdup - return a pointer
@@ -9,16 +10,20 @@
 char *_strdup(char *str)
 {
 	char *str1;
-	unsigned int len;
+	unsigned int c, len = 0;
 
-	str1 = malloc (sizeof(char) * sizeof(str)/sizeof(char));
+	while (str[len])
+	{
+		len++;
+	}
+	str1 = malloc (sizeof(char) * (len + 1));
 	if (str == NULL || str1 == NULL)
 	{
 		return (NULL);
 	}
-	for (len = 0; len <= sizeof(str) + 1; len++)
+	for (c = 0; c <= (len + 1); c++)
 	{
-		*(str1 + len) = *(str + len);
+		*(str1 + c) = *(str + c);
 	}
 	return (str1);
 }
