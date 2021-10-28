@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-char write_str(char *str, char *str1, int len);
+void write_str(char *str, char *str1, int len);
 /**
  * string_nconcat - imput
  * @s1: char argument
@@ -13,7 +13,7 @@ char write_str(char *str, char *str1, int len);
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *str;
-	unsigned int c, d, len1 = 0, len2 = 0;
+	unsigned int c, len1 = 0, len2 = 0;
 
 	if (s2 == NULL)
 	{
@@ -42,13 +42,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (n >= len2)
 	{
-		write_str(str[len1 - 1], s2, len2);
-		*(str + (c - 1) + d) = '\0';
+		write_str((str + (len1)), s2, len2);
+		*(str + (len1 - 1) + (len2 - 1)) = '\0';
 	}
 	else
 	{
-		write_str(str[len1 - 1], s2, n);
-		*(str + (c - 1) + d) = '\0';
+		write_str((str + (len1)), s2, n);
+		*(str + len1 + n) = '\0';
 	}
 	return (str);
 }
@@ -61,7 +61,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
  * Return: returns 0
  */
 
-char write_str(char *str, char *str1, int len)
+void write_str(char *str, char *str1, int len)
 {
 	int c;
 
