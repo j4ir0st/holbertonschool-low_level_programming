@@ -30,17 +30,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		len2++;
 	}
-	str = malloc(sizeof(char) * (len1 + n + 1));
-	if (str == NULL)
-	{
-		return (NULL);
-	}
-	for (c = 0; c <= len1; c++)
-	{
-		*(str + c) = *(s1 + c);
-	}
 	if (n >= len2)
 	{
+		str = malloc(sizeof(char) * (len1 + len2 + 1));
+		if (str == NULL)
+		{
+			return (NULL);
+		}
+		for (c = 0; c <= len1; c++)
+		{
+			*(str + c) = *(s1 + c);
+		}
 		for (d = 0; d <= len2; d++)
 		{
 			*(str + (c - 1) + d) = *(s2 + d);
@@ -49,6 +49,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	else
 	{
+		str = malloc(sizeof(char) * (len1 + n + 1));
+		if (str == NULL)
+		{
+			return (NULL);
+		}
+		for (c = 0; c <= len1; c++)
+		{
+			*(str + c) = *(s1 + c);
+		}
 		for (d = 0; d <= n; d++)
                 {
                         *(str + (c - 1) + d) = *(s2 + d);
