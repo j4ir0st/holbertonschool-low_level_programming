@@ -34,13 +34,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		return (NULL);
 	}
-	for (c = 0; c <= len1; c++)
+	for (c = 0; c < len1; c++)
 	{
 		*(str + c) = *(s1 + c);
 	}
 	if (n >= len2)
 	{
-		for (d = 0; d <= len2; d++)
+		for (d = 0; d < len2; d++)
 		{
 			*(str + (c - 1) + d) = *(s2 + d);
 		}
