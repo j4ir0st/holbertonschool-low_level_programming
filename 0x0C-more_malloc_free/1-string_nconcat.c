@@ -1,12 +1,13 @@
 #include <stdlib.h>
 #include <string.h>
 
+char write_str(char *str, char *str1, int len);
 /**
  * string_nconcat - imput
  * @s1: char argument
  * @s2: char argument
  * @n: int argument
- * Return: returns 0
+ * Return: returns str
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
@@ -22,14 +23,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s1 = "";
 	}
-	while (s1[len1])
-	{
-		len1++;
-	}
-	while (s2[len2])
-	{
-		len2++;
-	}
+	len1 = strlen(s1);
+	len2 = strlen(s2);
 	if (len2 <= n)
 	{
 		c = len2;
@@ -41,28 +36,37 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	str = malloc(sizeof(char) * (len1 + c + 1));
 	if (str == NULL)
 	{
-		free (str);
 		return (NULL);
 	}
-	for (c = 0; c <= len1; c++)
+	write_str(str, s1, len1);
+
+	if (n >= len2)
 	{
-		*(str + c) = *(s1 + c);
-	}
-	if(n >= len2)
-        {
-		for (d = 0; d < len2; d++)
-		{
-			*(str + (c - 1) + d) = *(s2 + d);
-		}
+		write_str(str[len1 - 1], s2, len2);
 		*(str + (c - 1) + d) = '\0';
 	}
 	else
 	{
-		for (d = 0; d < n; d++)
-		{
-			*(str + (c - 1) + d) = *(s2 + d);
-		}
+		write_str(str[len1 - 1], s2, n);
 		*(str + (c - 1) + d) = '\0';
 	}
 	return (str);
+}
+
+/**
+ * write_str - imput
+ * @str: char argument
+ * @str1: char argument
+ * @len: int argument
+ * Return: returns 0
+ */
+
+char write_str(char *str, char *str1, int len)
+{
+	int c;
+
+	for (c = 0; c <= len; c++)
+	{
+		*(str + c) = *(str1 + c);
+	}
 }
