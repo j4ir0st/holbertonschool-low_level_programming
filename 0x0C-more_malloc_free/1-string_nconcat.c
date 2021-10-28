@@ -43,7 +43,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n >= len2)
 	{
 		write_str((str + len1), s2, len2);
-		*(str + len1 + len2 = '\0';
+		*(str + len1 + len2) = '\0';
 	}
 	else
 	{
