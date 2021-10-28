@@ -4,7 +4,7 @@
  * _calloc - imput
  * @nmemb: unsigned int argument
  * @size: unsigned int argument
- * Return: 0
+ * Return: str
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
@@ -21,7 +21,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	for (c = 0; c < nmemb; c++)
+	for (c = 0; c <= nmemb; c++)
 	{
 		*(str + c) = 0;
 	}
