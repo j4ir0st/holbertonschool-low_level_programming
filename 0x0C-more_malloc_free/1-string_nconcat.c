@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * string_nconcat - imput
@@ -11,7 +12,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *str;
-	unsigned int c, d, len1 = 0, len2 = 0;
+	unsigned int c, d, len1, len2;
 
 	if (s2 == NULL)
 	{
@@ -21,13 +22,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s1 = "";
 	}
-	while (s1[len1])
+	len1 = strlen(s1);
+	len2 = strlen(s2);
+	if (n >= len2)
 	{
-		len1++;
-	}
-	while (s2[len2])
-	{
-		len2++;
+		n = len2;
 	}
 	str = malloc(sizeof(char) * (len1 + n + 1));
 	if (str == NULL)
@@ -38,21 +37,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		*(str + c) = *(s1 + c);
 	}
-	if (n >= len2)
+	for (d = 0; d <= n; d++)
 	{
-		for (d = 0; d <= len2; d++)
-		{
-			*(str + (c - 1) + d) = *(s2 + d);
-		}
-		*(str + (c - 1) + d) = '\0';
+		*(str + (c - 1) + d) = *(s2 + d);
 	}
-	else
-	{
-		for (d = 0; d <= n; d++)
-		{
-			*(str + (c - 1) + d) = *(s2 + d);
-		}
-		*(str + (c - 1) + d) = '\0';
-	}
+	*(str + (c - 1) + d) = '\0';
 	return (str);
 }
