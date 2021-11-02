@@ -1,15 +1,20 @@
+#include <stdlib.h>
 #include "dog.h"
 
 /**
  * init_dog - input
+ * @d: struct name
  * @name: First member
  * @age: Second member
  * @owner: Third member
- * @d: struct name
  */
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
+	if (d == NULL)
+	{
+		exit(0);
+	}
 	d->name = name;
 	d->age = age;
 	d->owner = owner;
