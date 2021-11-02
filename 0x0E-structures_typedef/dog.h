@@ -17,14 +17,4 @@ struct dog
 	char *owner;
 };
 
-/**
- * init_dog - input
- * @d: struct name
- * @name: First member
- * @age: Second member
- * @owner: Third member
- */
-
-void init_dog(struct dog *d, char *name, float age, char *owner);
-
 #endif
