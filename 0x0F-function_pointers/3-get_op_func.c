@@ -4,6 +4,7 @@
 /**
  * get_op_func - Struct op
  * @s: char arg
+ * Return: the operation
  */
 
 int (*get_op_func(char *s))(int num1, int num2)
@@ -18,11 +19,11 @@ int (*get_op_func(char *s))(int num1, int num2)
 	};
 	int i = 0;
 
-	while(i < 5)
+	while (i < 5)
 	{
-		if(strcmp(ops[i].op, s) == 0)
+		if (strcmp(ops[i].op, s) == 0)
 		{
-			return(ops[i].f);
+			return (ops[i].f);
 		}
 		i++;
 	}
