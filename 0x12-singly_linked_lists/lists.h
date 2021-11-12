@@ -22,6 +22,14 @@ typedef struct list_s
 } list_t;
 
 /**
+ * list_len - prints all elements of list
+ * @h: list_t argument
+ * Return: c
+ */
+
+size_t list_len(const list_t *h);
+
+/**
  * print_list - prints all elements of list
  * @h: list_t argument
  * Return: c
