@@ -4,7 +4,7 @@
  * add_node - adds a node at the beginning of list
  * @head: list_t argument
  * @str: char pointer argument
- * Ret:adress
+ * Return: adress
  */
 
 list_t *add_node(list_t **head, const char *str)
