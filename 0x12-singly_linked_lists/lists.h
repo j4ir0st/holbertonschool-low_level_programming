@@ -22,6 +22,31 @@ typedef struct list_s
 } list_t;
 
 /**
+ * free_list - frees a list
+ * @head: list_t argument
+ */
+
+void free_list(list_t *head);
+
+/**
+ * add_node_end - adds a node at the end of list
+ * @head: list_t argument
+ * @str: char pointer argument
+ * Return: adress
+ */
+
+list_t *add_node_end(list_t **head, const char *str);
+
+/**
+ * add_node - adds a node at the beginning of list
+ * @head: list_t argument
+ * @str: char pointer argument
+ * Return: adress
+ */
+
+list_t *add_node(list_t **head, const char *str);
+
+/**
  * list_len - prints all elements of list
  * @h: list_t argument
  * Return: c
