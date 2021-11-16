@@ -15,15 +15,9 @@
 
 typedef struct listint_s
 {
-    int n;
-    struct listint_s *next;
+	int n;
+	struct listint_s *next;
 } listint_t;
-
-/**
- * print_listint - prints all the elements of a list
- * @h: contant listint_t argument
- * Return: On success 0.
- */
 
 listint_t *find_listint_loop(listint_t *head);
 size_t free_listint_safe(listint_t **h);
