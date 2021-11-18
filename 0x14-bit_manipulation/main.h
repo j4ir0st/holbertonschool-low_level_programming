@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
+#include <limits.h>
 
 int get_endianness(void);
 unsigned int flip_bits(unsigned long int n, unsigned long int m);
