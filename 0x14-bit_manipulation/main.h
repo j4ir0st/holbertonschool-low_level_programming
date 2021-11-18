@@ -1,6 +1,19 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
 
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+
+int get_endianness(void);
+unsigned int flip_bits(unsigned long int n, unsigned long int m);
+int clear_bit(unsigned long int *n, unsigned int index);
+int set_bit(unsigned long int *n, unsigned int index);
+int get_bit(unsigned long int n, unsigned int index);
+void print_binary(unsigned long int n);
+unsigned int binary_to_uint(const char *b);
+
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print
