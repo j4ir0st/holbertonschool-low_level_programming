@@ -1,20 +1,22 @@
 #include "main.h"
 
 /**
- * binary_to_uint - converts binary to int
- * @b: binary as char
- * Return: Integer
+ * potenciaConWhile - eleva a la potencia
+ * @numero: numero a elevar
+ * @potencia: potencia a elevar
+ * Return: resultado as Integer
  */
 
 long potenciaConWhile(unsigned int numero, unsigned int potencia)
 {
-    unsigned int resultado = numero;
-    while (potencia > 1)
-    {
-        resultado = resultado * numero;
-        potencia--;
-    }
-    return resultado;
+	unsigned int resultado = numero;
+
+	while (potencia > 1)
+	{
+		resultado = resultado * numero;
+		potencia--;
+	}
+	return (resultado);
 }
 
 /**
@@ -46,7 +48,6 @@ unsigned int binary_to_uint(const char *b)
 			break;
 		default:
 			return (0);
-			break;
 		}
 		c--;
 	}
