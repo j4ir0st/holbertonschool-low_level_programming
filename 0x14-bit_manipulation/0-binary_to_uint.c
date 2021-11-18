@@ -11,6 +11,10 @@ long potenciaConWhile(unsigned int numero, unsigned int potencia)
 {
 	unsigned int resultado = numero;
 
+	if (potencia == 0)
+	{
+		return (1);
+	}
 	while (potencia > 1)
 	{
 		resultado = resultado * numero;
