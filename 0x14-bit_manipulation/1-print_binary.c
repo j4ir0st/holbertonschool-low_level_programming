@@ -12,7 +12,7 @@ void print_binary(unsigned long int n)
 
 	if (n == 0)
 	{
-		printf("0");
+		putchar('0');
 		return;
 	}
 	while (mask)
@@ -23,7 +23,14 @@ void print_binary(unsigned long int n)
 		}
 		if (dec != 0)
 		{
-			printf("%d", (n & mask) ? 1 : 0);
+			if (n & mask)
+			{
+				_putchar('1');
+			}
+			else
+			{
+				_putchar('0');
+			}
 		}
 		mask >>= 1;
 	}
