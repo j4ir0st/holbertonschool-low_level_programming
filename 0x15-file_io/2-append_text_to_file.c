@@ -11,20 +11,15 @@ int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd, wd;
 
-	fd = open(filename, O_APPEND, 0600);
+	fd = open(filename, O_CREAT | O_WRONLY | O_APPEND);
 	if (fd == -1 || filename == NULL)
 	{
 		return (-1);
 	}
-	if (text_content == NULL && filename)
+	if (text_content == NULL)
 	{
 		close(fd);
 		return (1);
-	}
-	else if (text_content == NULL && !filename)
-	{
-		close(fd);
-		return (-1);
 	}
 	wd = write(fd, text_content, strlen(text_content));
 	if (wd == -1)
