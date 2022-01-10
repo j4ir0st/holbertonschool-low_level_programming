@@ -117,4 +117,12 @@ int _isupper(int c);
 
 int _isdigit(int c);
 
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+
+void print_square(int size);
+
 #endif
