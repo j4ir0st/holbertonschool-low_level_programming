@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * print_square - Entry point
+ * @size: sixe of the square
  */
+
 void print_square(int size)
 {
 	int x = 0;
@@ -19,11 +19,10 @@ void print_square(int size)
 		}
 		_putchar(10);
 		x++;
+		y = 0;
 	}
 	if (x <= 0)
 	{
 		_putchar(10);
 	}
-
-	return (0);
 }
