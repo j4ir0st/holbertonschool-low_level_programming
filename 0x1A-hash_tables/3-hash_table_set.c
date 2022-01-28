@@ -13,7 +13,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned int idx;
 	hash_node_t *new_entry, *tmp;
 
-	if (strcmp(key, "") == 0)
+	if (strcmp(key, "") == 0 || ht == NULL)
 		return (0);
 	idx = key_index((unsigned char *)key, ht->size);
 	new_entry = ht->array[idx];
@@ -44,6 +44,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	ht->array[idx]->next = new_entry;
 	return (1);
 }
+
+/**
+ * set_node - check the code
+ * @key: pointer of the key
+ * @value: value of the key
+ * Return: Always EXIT_SUCCESS.
+ */
 
 hash_node_t *set_node(const char *key, const char *value)
 {
