@@ -11,7 +11,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 	unsigned long int c = 0;
 
 	new_hash = malloc(sizeof(shash_table_t));
-	if (hash == NULL)
+	if (new_hash == NULL)
 		return (NULL);
 	new_hash->size = size;
 	new_hash->array = malloc(sizeof(shash_node_t *) * size);
@@ -24,7 +24,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 	new_hash->stail = NULL;
 	for (c = 0; c < size; c++)
 		new_hash->array[c] = NULL;
-	return (hash);
+	return (new_hash);
 }
 
 /**
