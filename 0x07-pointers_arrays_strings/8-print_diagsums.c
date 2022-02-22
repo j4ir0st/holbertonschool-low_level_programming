@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * print_diagsums - check the code
+ * @a: pointer to matrix
+ * @size: size of the matrix
+ * Return: None
  */
 
 void print_diagsums(int *a, int size)
@@ -17,7 +18,7 @@ void print_diagsums(int *a, int size)
 	printf("%i, ", diag_p);
 	for (i = size - 1; i < (size * size) - (size - 1); i += size - 1)
 	{
-                diag_s += a[i];
+		diag_s += a[i];
 	}
 	printf("%i\n", diag_s);
 }
