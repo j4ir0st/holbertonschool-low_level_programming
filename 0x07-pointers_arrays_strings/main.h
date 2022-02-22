@@ -1,6 +1,57 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
 
+#include <stdio.h>
+
+void print_diagsums(int *a, int size);
+
+/**
+ * print_chessboard - prints the posicion of a chessboard
+ * @a: array
+ */
+
+void print_chessboard(char (*a)[8]);
+
+/**
+ * *_strstr - locates a substring
+ * @haystack: char argument as pointer
+ * @needle: char argument
+ */
+
+char *_strstr(char *haystack, char *needle);
+
+/**
+ * _strpbrk - searches a string for any of a set of bytes
+ * @s: char argument as pointer
+ * @accept: char argument
+ */
+char *_strpbrk(char *s, char *accept);
+
+/**
+ * _strspn - gets the length of a prefix substring
+ * @s: char argument as pointer
+ * @accept: char argument
+ */
+
+unsigned int _strspn(char *s, char *accept);
+
+/**
+ * *_strchr - locates a character in a string
+ * @s: char argument as pointer
+ * @c: char argument
+ */
+
+char *_strchr(char *s, char c);
+
+/**
+ * *_memcpy - fills memory with a constant byte
+ * @dest: char argument as destiny
+ * @src: char argument as source
+ * @n: unsigned int argument
+ */
+
+char *_memcpy(char *dest, char *src, unsigned int n);
+
 /**
  * *_memset - fills memory with a constant byte
  * @s: char argument as pointer
