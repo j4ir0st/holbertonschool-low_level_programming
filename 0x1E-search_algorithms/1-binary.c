@@ -19,7 +19,7 @@ int binary_search(int *array, size_t size, int value)
 		return (left);
 	if (array[right] == value)
 		return (right);
-	while (left != right)
+	while (left <= right)
 	{
 		print_array(array, left, right);
 		m = floor((left + right) / 2);
@@ -30,7 +30,6 @@ int binary_search(int *array, size_t size, int value)
 		else
 			return (m);
 	}
-	print_array(array, left, right);
 	return (-1);
 }
 
