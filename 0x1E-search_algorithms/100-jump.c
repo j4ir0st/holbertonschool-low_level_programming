@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * binary_search - Entry point
+ * jump_search - Entry point
  * @array: pointer to the first element of the array to search in
  * @size: number of elements in array
  * @value: value to search for
@@ -13,7 +13,7 @@ int jump_search(int *array, size_t size, int value)
 	size_t left = 0, right = 0, jump = 0, i = 0;
 
 	if (!array)
-                return (-1);
+		return (-1);
 
 	jump = floor(sqrt(size));
 	while (right < size && array[right] < value)
@@ -27,7 +27,7 @@ int jump_search(int *array, size_t size, int value)
 	{
 		printf("Value checked array[%li] = [%i]\n", i, array[i]);
 		if (array[i] == value)
-                        return (i);
+			return (i);
 	}
 	return (-1);
 }
